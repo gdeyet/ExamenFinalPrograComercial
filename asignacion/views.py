@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from django.contrib import messages
+
+import asignacion
 from .forms import CursoForm
 from asignacion.models import Curso, Estudio
 
@@ -27,4 +29,4 @@ def curso_nuevo(request):
 
         formulario = CursoForm()
 
-    return render(request, 'Curso/Curso_editar.html', {'formulario': formulario})
+    return render(request, 'asignacion/asignacion_editar.html', {'formulario': formulario})
